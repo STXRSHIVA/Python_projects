@@ -22,9 +22,6 @@ The code consists of the following key components:
     
     - The program prompts the user to enter an operator and two numbers.
     
-    python
-    
-    Copy code
     
 ```python
 	operator = input("Enter an Operator ( + - * / )")
@@ -36,12 +33,8 @@ The code consists of the following key components:
 2. **Conditional Logic**:
     
     - The program uses `if`, `elif`, and `else` statements to determine which operation to perform based on the operator entered by the user.
-    
-    python
-    
-    Copy code
-    
-	```python
+        
+```python
 	if operator == '+':
 	    result = num1 + num2
 	elif operator == '-':
@@ -82,6 +75,5 @@ Copy code
 ```python
 print(round(result, 3))
 ```
-`
 
 This rounds the `result` to three decimal places, which is particularly useful when dealing with division or other operations that may yield long decimal values.

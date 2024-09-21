@@ -26,7 +26,7 @@ The code consists of the following key components:
     
     Copy code
     
-	```python
+```python
 	operator = input("Enter an Operator ( + - * / )")
 	num1 = int(input("Enter the first Number"))
 	num2 = int(input("Enter the second number"))

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a simple command-line calculator implemented in Python. It allows users to perform basic arithmetic operations: addition, subtraction, multiplication, and division. The results are rounded to three decimal places for better readability.
+This is a simple command-line calculator implemented in Python. It allows users to perform basic arithmetic operations: addition, subtraction, multiplication, and division. The results are rounded to three decimal places using the `round()` function for better readability.
 
 ## Features
 
@@ -11,34 +11,55 @@ This is a simple command-line calculator implemented in Python. It allows users 
     - Subtraction (`-`)
     - Multiplication (`*`)
     - Division (`/`)
-- Input validation for operator
-- Rounds results to three decimal places
+- Input validation for the operator
+- Utilizes the `round()` function to round results to three decimal places
 
-## Requirements
+## Understanding the Code
 
-- Python 3.x
+The code consists of the following key components:
 
-## Usage
-
-1. Clone the repository or copy the code into your Python environment.
-2. Run the script using a Python interpreter:
+1. **User Input**:
     
-    bash
+    - The program prompts the user to enter an operator and two numbers.
+    
+    python
     
     Copy code
     
-    `python calculator.py`
+    `operator = input("Enter an Operator ( + - * / )") num1 = int(input("Enter the first Number")) num2 = int(input("Enter the second number"))`
     
-3. Follow the prompts:
-    - Enter an operator (`+`, `-`, `*`, `/`)
-    - Enter the first number
-    - Enter the second number
-4. The result of the operation will be displayed rounded to three decimal places.
+2. **Conditional Logic**:
+    
+    - The program uses `if`, `elif`, and `else` statements to determine which operation to perform based on the operator entered by the user.
+    
+    python
+    
+    Copy code
+    
+    `if operator == '+':     result = num1 + num2 elif operator == '-':     result = num1 - num2 elif operator == '*':     result = num1 * num2 elif operator == '/':     result = num1 / num2 else:     print(f"{operator} is not a valid operator")`
+    
+3. **Rounding Results**:
+    
+    - The `round()` function is used to round the result to three decimal places before displaying it.
+    
+    python
+    
+    Copy code
+    
+    `print(round(result, 3))`
+    
+4. **Error Handling**:
+    
+    - If the user enters an invalid operator, the program will display an appropriate message.
 
-## Example
+## The `round()` Function
 
-mathematica
+The `round()` function is an important part of this calculator, as it ensures the output is user-friendly by limiting the number of decimal places shown. Here’s how it's used:
+
+python
 
 Copy code
 
-`Enter an Operator ( + - * / ): + Enter the first Number: 5 Enter the second number: 3 Result: 8.000`
+`print(round(result, 3))`
+
+This rounds the `result` to three decimal places, which is particularly useful when dealing with division or other operations that may yield long decimal values.

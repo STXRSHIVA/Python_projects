@@ -26,7 +26,12 @@ The code consists of the following key components:
     
     Copy code
     
-    `operator = input("Enter an Operator ( + - * / )") num1 = int(input("Enter the first Number")) num2 = int(input("Enter the second number"))`
+	```python
+	operator = input("Enter an Operator ( + - * / )")
+	num1 = int(input("Enter the first Number"))
+	num2 = int(input("Enter the second number"))
+  ```
+  
     
 2. **Conditional Logic**:
     
@@ -36,7 +41,19 @@ The code consists of the following key components:
     
     Copy code
     
-    `if operator == '+':     result = num1 + num2 elif operator == '-':     result = num1 - num2 elif operator == '*':     result = num1 * num2 elif operator == '/':     result = num1 / num2 else:     print(f"{operator} is not a valid operator")`
+	```python
+	if operator == '+':
+	    result = num1 + num2
+	elif operator == '-':
+	    result = num1 - num2
+	elif operator == '*':
+	    result = num1 * num2
+	elif operator == '/':
+	    result = num1 / num2
+	else:
+    print(f"{operator} is not a valid operator")
+```
+
     
 3. **Rounding Results**:
     
@@ -46,7 +63,9 @@ The code consists of the following key components:
     
     Copy code
     
-    `print(round(result, 3))`
+```python
+    print(round(result, 3))`
+```
     
 4. **Error Handling**:
     
@@ -60,6 +79,9 @@ python
 
 Copy code
 
-`print(round(result, 3))`
+```python
+print(round(result, 3))
+```
+`
 
 This rounds the `result` to three decimal places, which is particularly useful when dealing with division or other operations that may yield long decimal values.
